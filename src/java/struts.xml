@@ -1,0 +1,35 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: cyclingbd007 -->
+ 
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.extension" value="html" />
+    
+    <!-- Configure the default package -->
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="index" class="controller.ProductController">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="insertProduct" method="insertProduct" class="controller.ProductController">
+            <result name="success">/insert.jsp</result>
+            <result name="input">/insert.jsp</result>
+        </action>
+        <action name="updateProduct" method="updateProduct" class="controller.ProductController">
+            <result name="success">/edit.jsp</result>
+            <result name="input">/edit.jsp</result>
+        </action>
+        <action name="insert">
+            <result name="success">/insert.jsp</result>
+        </action>
+        <action name="edit" class="controller.ProductController" method="editProduct">
+            <result name="success">/edit.jsp</result>
+        </action>
+        <action name="delete" class="controller.ProductController" method="deleteProduct">
+            <result name="success">/index.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    </package>
+</struts>
