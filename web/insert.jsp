@@ -42,6 +42,7 @@
             <s:textfield name="product.qty" label="Product Quantity: "/>
             <s:submit value="Save"></s:submit>
         </s:form>
+        
             <a href="index.html">Product List Page</a>
     </body>
 </html>
